@@ -1,0 +1,11 @@
+#Options +FollowSymLinks
+RewriteEngine on
+#rewritebase /
+RewriteRule server/php/files/([0-9]*)/thumbnail/yok.jpg$ yok.jpg [QSA,NC,L]
+RewriteRule server/php/files/([0-9]*)/thumbnail/yok.jpg$ yok.jpg [QSA,NC,L]
+RewriteRule server/php/files/([0-9]*)/yok.jpg$ yok.jpg [QSA,NC,L]
+RewriteRule server/php/files/([0-9]*)/(.*?)$ files/$1/$2 [QSA,NC,L]
+<IfModule mod_security.c>
+SecFilterEngine Off
+SecFilterScanPOST Off
+</IfModule>
